@@ -6,12 +6,6 @@ tensorflow
 matplotlib
 wordcloud
 newspaper3k
-lxml
 lxml_html_clean
-beautifulsoup4
-requests
-tqdm
-Pillow
 pdfplumber
 nltk
-joblib
