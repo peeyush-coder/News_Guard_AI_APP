@@ -18,7 +18,7 @@ st.set_page_config(
     page_icon = "📰",
     layout = "wide"
 )
-max_len = 500
+MAX_LEN = 500
 
 # ==================================================
 # DATA
