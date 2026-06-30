@@ -1,13 +1,10 @@
 import streamlit as st
 import pickle
 import tensorflow as tf
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from newspaper import Article
 from urllib.parse import urlparse
 import pdfplumber
-
 import nltk
 
 try:
