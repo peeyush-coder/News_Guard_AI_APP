@@ -33,12 +33,11 @@ def load_data():
     df = pd.concat([fake,true], axis = 0, ignore_index=True)
     return df
 
-df=load_data()
 #==========================================================
 #Model
 #==========================================================
 
-@st.cache_data
+@st.cache_resource
 def load_model():
     model_path = "models/bigru_attention_model.h5"
     from tensorflow.keras.initializers import Orthogonal
@@ -173,7 +172,7 @@ menu = st.sidebar.radio(
 # ==================================================
 
 if menu == "Dashboard":
-
+    df = load_data()
     st.title("📰 Fake News Detection Dashboard")
 
     col1, col2, col3, col4 = st.columns(4)
@@ -377,7 +376,7 @@ elif menu == "Fake News Detection":
 # ==================================================
 
 elif menu == "News Labeling":
-
+    df = load_data()
     st.title("🏷️ News Labeling")
 
     sample = df.sample(1).iloc[0]
@@ -440,7 +439,7 @@ elif menu == "News Labeling":
 # ==================================================
 
 elif menu == "Analytics":
-
+    df = load_data()
     st.title("📊 Analytics")
 
     counts = df["label"].value_counts()
@@ -496,7 +495,7 @@ elif menu == "Analytics":
 # ==================================================
 
 elif menu == "Dataset Explorer":
-
+    df = load_data()
     st.title("📚 Dataset Explorer")
 
     st.dataframe(
