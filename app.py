@@ -7,10 +7,11 @@ from urllib.parse import urlparse
 import pdfplumber
 import nltk
 
-try:
-    nltk.data.find("tokenizers/punkt")
-except LookupError:
-    nltk.download("punkt")
+@st.cache_resource
+def download_nltk():
+    nltk.download("punkt", quiet=True)
+
+download_nltk()
 
 # ==================================================
 # CONFIG
