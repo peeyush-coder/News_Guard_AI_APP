@@ -1,11 +1,5 @@
 streamlit
-pandas
-numpy
-scikit-learn
 tensorflow
-matplotlib
-wordcloud
 newspaper3k
 lxml_html_clean
 pdfplumber
-nltk
