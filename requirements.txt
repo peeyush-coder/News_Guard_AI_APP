@@ -1,5 +1,8 @@
 streamlit
+numpy
+scikit-learn
 tensorflow
 newspaper3k
 lxml_html_clean
 pdfplumber
+nltk
